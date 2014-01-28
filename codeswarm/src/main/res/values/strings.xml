@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CodeSwarm</string>
+    <string name="title_developer_detail">Developer Detail</string>
+    <string name="title_manager_detail">Developer Detail</string>
+    <string name="screen_off">screen OFF</string>
+    <string name="title_developer_list">Developers</string>
+    <string name="title_manager_list">Managers</string>
+
+</resources>

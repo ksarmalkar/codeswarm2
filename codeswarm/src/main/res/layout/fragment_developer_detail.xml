@@ -1,0 +1,75 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".DeveloperDetailFragment">
+    <TextView
+        android:id="@+id/developer_name"
+        style="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textIsSelectable="true"
+        android:text="Kedar Sarmalkar"
+        />
+    <ImageView
+        android:id="@+id/developer_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/kedar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="5dp"
+        />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#ffc3c3c3"
+        android:layout_below="@+id/developer_image"
+        android:layout_margin="5dp"
+        />
+    <TextView
+        android:id="@+id/developer_description"
+        style="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/divider"
+        android:textIsSelectable="true"
+        android:text="Android Developer"
+        />
+    <TextView
+        android:id="@+id/developer_languages"
+        style="?android:attr/textAppearanceMediumInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/developer_description"
+        android:textIsSelectable="true"
+        android:text="Java , C"
+        android:textColor="#ffc3c3c3"
+        />
+    <View
+        android:id="@+id/divider_vert"
+        android:layout_width="2dp"
+        android:layout_height="25dp"
+        android:background="#ffc3c3c3"
+        android:layout_below="@+id/developer_description"
+        android:layout_toRightOf="@id/developer_languages"
+        android:layout_margin="5dp"
+        />
+    <TextView
+        android:id="@+id/developer_experience"
+        style="?android:attr/textAppearanceMediumInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_toRightOf="@id/divider_vert"
+        android:layout_below="@id/developer_description"
+        android:textIsSelectable="true"
+        android:text="8 years"
+        android:textColor="#ffc3c3c3"
+        />
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sample.codeswarm"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- ACTIVITIES -->
+        <activity
+            android:name="com.sample.codeswarm.DeveloperListActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sample.codeswarm.DeveloperDetailActivity"
+            android:label="@string/title_developer_detail"
+            android:parentActivityName="com.sample.codeswarm.DeveloperListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DeveloperListActivity" />
+        </activity>
+
+        <activity
+            android:name=".servicedev.ManagerListActivity"
+            android:label="@string/title_manager_list" >
+        </activity>
+        <activity
+            android:name=".servicedev.ManagerDetailActivity"
+            android:label="@string/title_manager_detail"
+            android:parentActivityName="com.sample.codeswarm.servicedev.ManagerListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sample.codeswarm.servicedev.ManagerListActivity" />
+        </activity>
+
+        <!-- RECEIVERS -->
+        <receiver android:name="com.sample.codeswarm.receivers.ScreenBroadCastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+            </intent-filter>
+        </receiver>
+
+        <!-- SERVICES -->
+        <service android:name="com.sample.codeswarm.services.SimpleIntentService" />
+        <service
+            android:name=".services.ManagerService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+
+    </application>
+
+</manifest>
